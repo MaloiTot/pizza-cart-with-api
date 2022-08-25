@@ -1,0 +1,88 @@
+
+.header{
+    background-color: #283618;
+    color: #dda15e;
+    width: 50%;
+}
+
+.user{
+    margin: 8px;
+    padding: 1em;
+    background-color: #bc6c25;
+    color: #283618;
+    width: 46%;
+    font-size: 8px bold;
+    
+}
+
+table, th {
+    border: 1px dotted #283618;
+    border-radius: 10px;
+    background-color: #bc6c25;
+}
+
+td {
+    padding: 2%;
+    background-color: #283618;
+}
+
+.Total{
+    text-align: right;
+    margin-right: 10%;
+}
+input {
+    background-color: #fefae0;
+}
+button{
+    background-color: #fefae0 ;
+    color: #bc6c25;
+    border-color: #283618;
+    border-radius: 3px;
+}
+
+*{
+    margin-left: 1%;
+    background-color: 
+}
+.user{
+    padding-top: 2%;
+}
+
+.cart, td{
+    border: 1px solid #dda15e;
+    background-color: #606c38;
+    color: #fefae0;
+    padding: 1em;
+    width: 15em;
+    margin: 1em;
+    margin-left: 5em;
+    border-radius: 1em;
+}
+
+.one{
+    border: 2px solid #dda15e;
+}
+.one, th{
+    background-color: #283618;
+}
+
+span{
+    display: inline;
+}
+
+.cartTot{
+    background-color: #bc6c25;
+}
+
+h2{
+   color: #283618; 
+   text-align: left;
+   margin-left: ;
+}
+
+h1{
+    color: #283618; 
+    text-align: left;
+    margin-left: 1em;
+    font-size: 3em;
+ }

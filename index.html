@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tot's Pizza place</title>
+    <link rel="icon" href="icon/faviconLM.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="pizza-cart-api.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <div x-data="pizzaCartWithAPIWidget">
+
+    <div class="header">
+        <div x-text="message"></div>
+        <div x-text="cartId"></div>
+
+    </div>
+        
+        <h1> ToT's Pizza Spot</h1>
+
+        <div class="user">
+            Username: <input type="text" x-model="username">
+
+        </div>
+
+        <span><h2 x-text="'Pizzas To Order From (' + pizzas.length + ')'"> </h2></span>
+        <span><button @click="show=!show"><i class='fa fa-shopping-cart'></i></button></span>
+
+     
+     <div x-show.transition="show">
+        <div class="cart" width="40%">
+            <h3>Here's your cart:</h3>
+            <table class="one" width="90%">
+                <tr>
+
+                    <th>Flavour</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+                <template x-for="pizza in cart.pizzas">
+
+          <tr>
+            <td x-text="pizza.flavour"></td>
+            <td x-text="pizza.qty"></td>
+            <td x-text="pizza.total"></td>
+          </tr>
+
+        </template>
+            </table>
+            <div class="Total">
+                <div class="cartTot">
+                    Cart Total:<strong x-text="cart.total.toFixed(2)"></strong>
+                </div>
+    
+            </div>
+        </div>
+    </div> 
+        
+
+        <table width="50%">
+            <template x-for="pizza in pizzas">
+      
+        <tr>
+          <td>
+            <img x-bind:src="pizzaImage(pizza)" height="36" alt="">
+          </td>
+          <td x-text="pizza.flavour"></td>
+          <td x-text="pizza.size"></td>
+          <td x-text="pizza.price"></td>
+          <td>
+            <button x-on:click="add(pizza)">Buy</button>
+          </td>
+        </tr>
+      </table>
+
+
+    </template>
+    <div class="footer">
+        <div x-text="message2"></div>
+       
+
+    </div>
+
+    </div>
+ 
+</body>
+
+</html>
